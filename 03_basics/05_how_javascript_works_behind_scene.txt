@@ -1,0 +1,16 @@
+++++++++++++++++++++JavaScript Execution Context++++++++++++++++++++
+
+{} -> Global Execution Context -> 'this' is allocated
+
+-> Global Execution Context
+-> Function Execution Context
+-> Eval Execution Context
+
+code is executed in two phase
+
+{} --> Memory Creation Phase (every variable assigned with undefined and fuction is defined with definition written in code )
+   --> Execution Phase (all the assignment done as per code and executed)
+
+for function there is a Creation of new environment context containing (new variable environment + execution thread) in which it again do both step Memory Creation and Execution and return value if there to global context this happens to every function call and later after usage of sandbox it is deleted or distroyed
+
+// there is also a concept of callstack where a stack is maintain in which function is stored and after usage removed but difference comes when there is function inside a function so first function added to stack and later without removal of first second function is added into the stack and later after execution done according to LIFO(Last In First Out) stack empties 
